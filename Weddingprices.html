@@ -1,1 +1,508 @@
+<main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Options Section -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Wedding Date Selection -->
+                <section class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold text-[#9c7c5c] mb-4">Select Your Wedding Month</h2>
+                    <p class="text-gray-600 mb-4">Different months have different base pricing</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="option-card rounded-lg p-4 bg-white shadow cursor-pointer" data-type="date" data-value="apr-may" data-price="4250">
+                            <h3 class="font-semibold mb-2">April & May</h3>
+                            <p class="text-sm text-gray-600 mb-2">Spring Season</p>
+                            <p class="font-semibold text-[#9c7c5c]">$4,250</p>
+                        </div>
+                        
+                        <div class="option-card rounded-lg p-4 bg-white shadow cursor-pointer" data-type="date" data-value="jun-sep-oct" data-price="5250">
+                            <h3 class="font-semibold mb-2">June, September & October</h3>
+                            <p class="text-sm text-gray-600 mb-2">Premium Season</p>
+                            <p class="font-semibold text-[#9c7c5c]">$5,250</p>
+                        </div>
+                        
+                        <div class="option-card rounded-lg p-4 bg-white shadow cursor-pointer" data-type="date" data-value="jul-aug" data-price="3750">
+                            <h3 class="font-semibold mb-2">July & August</h3>
+                            <p class="text-sm text-gray-600 mb-2">Summer Season</p>
+                            <p class="font-semibold text-[#9c7c5c]">$3,750</p>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- Lodging Options -->
+                <section class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold text-[#9c7c5c] mb-4">Accommodation Packages</h2>
+                    <p class="text-gray-600 mb-4">Select your ideal lodging experience for your special day</p>
+                    
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="option-card rounded-lg p-5 bg-white shadow cursor-pointer" data-type="lodging" data-value="standard" data-price="1250">
+                            <h3 class="font-semibold mb-2 text-lg">Intimate Retreat</h3>
+                            <div class="text-sm text-gray-600 space-y-1 mb-3">
+                                <p>• Private master suite in our historic Farmhouse for the wedding couple (Saturday night)</p>
+                                <p>• Exclusive access to the Farmhouse common areas for your rehearsal dinner on Friday</p>
+                                <p>• Perfect for couples desiring an intimate wedding experience</p>
+                            </div>
+                            <p class="font-semibold text-[#9c7c5c]">$1,250</p>
+                        </div>
+                        
+                        <div class="option-card rounded-lg p-5 bg-white shadow cursor-pointer" data-type="lodging" data-value="deluxe" data-price="2250">
+                            <h3 class="font-semibold mb-2 text-lg">Family Gathering</h3>
+                            <div class="text-sm text-gray-600 space-y-1 mb-3">
+                                <p>• Exclusive use of the entire Farmhouse with four beautifully appointed bedrooms (Saturday night)</p>
+                                <p>• Accommodations for up to 8 guests in charming country elegance</p>
+                                <p>• Full access to the Farmhouse for your rehearsal dinner celebration on Friday</p>
+                                <p>• Ideal for including close family in your wedding weekend</p>
+                            </div>
+                            <p class="font-semibold text-[#9c7c5c]">$2,250</p>
+                        </div>
+                        
+                        <div class="option-card rounded-lg p-5 bg-white shadow cursor-pointer" data-type="lodging" data-value="premium" data-price="3000">
+                            <h3 class="font-semibold mb-2 text-lg">Estate Experience</h3>
+                            <div class="text-sm text-gray-600 space-y-1 mb-3">
+                                <p>• Complete wedding weekend with two-night accommodations (Friday & Saturday)</p>
+                                <p>• Exclusive use of the entire Farmhouse with four bedrooms for up to 8 guests</p>
+                                <p>• Additional Guesthouse accommodations for 4 more guests both nights</p>
+                                <p>• Dedicated space for your rehearsal dinner in our picturesque setting</p>
+                                <p>• The ultimate immersive wedding weekend for your closest friends and family</p>
+                            </div>
+                            <p class="font-semibold text-[#9c7c5c]">$3,000</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional Options -->
+                <section class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold text-[#9c7c5c] mb-4">Enhance Your Experience</h2>
+                    <p class="text-gray-600 mb-4">Customize your wedding weekend with these premium add-ons</p>
+                    
+                    <div class="space-y-4">
+                        <div class="option-card rounded-lg p-4 bg-white shadow cursor-pointer" data-type="addon" data-value="thursday-setup" data-price="200">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="font-semibold">Early Barn Access</h3>
+                                    <p class="text-sm text-gray-600">Thursday setup privileges for a stress-free wedding day</p>
+                                </div>
+                                <p class="font-semibold text-[#9c7c5c]">$200</p>
+                            </div>
+                        </div>
+                        
+                        <div id="thursday-lodging-option" class="option-card rounded-lg p-4 bg-white shadow cursor-pointer disabled" data-type="addon" data-value="thursday-lodging" data-price="400" data-requires="premium">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="font-semibold">Extended Stay Thursday</h3>
+                                    <p class="text-sm text-gray-600">Begin your celebration early with Thursday night accommodations (Estate Experience package only)</p>
+                                </div>
+                                <p class="font-semibold text-[#9c7c5c]">$400</p>
+                            </div>
+                        </div>
+                        
+                        <div class="option-card rounded-lg p-4 bg-white shadow cursor-pointer" data-type="addon" data-value="sunday-checkout" data-price="225">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="font-semibold">Leisurely Sunday</h3>
+                                    <p class="text-sm text-gray-600">Extended checkout until noon for a relaxed morning after</p>
+                                </div>
+                                <p class="font-semibold text-[#9c7c5c]">$225</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Information -->
+                <section id="contact-section" class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold text-[#9c7c5c] mb-4">Your Information</h2>
+                    <p class="text-gray-600 mb-4">Please provide your details to submit your wedding package request</p>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/xdkgqylr" method="POST" class="space-y-4">
+                        <!-- Hidden fields to store selections -->
+                        <input type="hidden" id="selected-date" name="selected_date" value="">
+                        <input type="hidden" id="selected-date-price" name="selected_date_price" value="">
+                        <input type="hidden" id="selected-lodging" name="selected_lodging" value="">
+                        <input type="hidden" id="selected-lodging-price" name="selected_lodging_price" value="">
+                        <input type="hidden" id="selected-addons" name="selected_addons" value="">
+                        <input type="hidden" id="subtotal-field" name="subtotal" value="">
+                        <input type="hidden" id="tax-field" name="tax" value="">
+                        <input type="hidden" id="total-field" name="total" value="">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md" required>
+                        </div>
+                        
+                        <div>
+                            <label for="wedding-date" class="block text-gray-700 mb-1">Preferred Wedding Date</label>
+                            <input type="date" id="wedding-date" name="wedding_date" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md" required>
+                        </div>
+                        
+                        <div>
+                            <label for="notes" class="block text-gray-700 mb-1">Additional Notes</label>
+                            <textarea id="notes" name="notes" rows="3" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-6">
+                    <h2 class="text-2xl font-semibold text-[#9c7c5c] mb-4">Your Wedding Package</h2>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div id="summary-date" class="summary-item py-2 border-b border-gray-200">
+                            <p class="text-gray-500">Wedding Month</p>
+                            <p class="font-semibold text-lg" id="date-selection">Please select a month</p>
+                            <p class="text-[#9c7c5c]" id="date-price">$0</p>
+                        </div>
+                        
+                        <div id="summary-lodging" class="summary-item py-2 border-b border-gray-200">
+                            <p class="text-gray-500">Accommodation Package</p>
+                            <p class="font-semibold text-lg" id="lodging-selection">Please select accommodations</p>
+                            <p class="text-[#9c7c5c]" id="lodging-price">$0</p>
+                        </div>
+                        
+                        <div id="summary-addons" class="summary-item py-2 border-b border-gray-200">
+                            <p class="text-gray-500">Enhancements</p>
+                            <div id="addon-list" class="space-y-2">
+                                <p class="text-gray-400 italic text-sm">No enhancements selected</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 pt-4 border-t border-gray-200">
+                        <div class="flex justify-between">
+                            <p>Subtotal</p>
+                            <p id="subtotal">$0</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Tax (6%)</p>
+                            <p id="tax">$0</p>
+                        </div>
+                        <div class="flex justify-between font-semibold text-lg pt-2 border-t border-gray-200">
+                            <p>Total</p>
+                            <p id="total" class="text-[#9c7c5c]">$0</p>
+                        </div>
+                    </div>
+                    
+                    <button id="submit-btn" class="mt-6 w-full py-3 bg-[#9c7c5c] text-white rounded-md hover:bg-[#8a6c4c] transition disabled:opacity-50 disabled:cursor-not-allowed">Submit Request</button>
+                    <button id="reset-btn" class="mt-3 w-full py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition">Reset Selections</button>
+                    
+                    <div id="success-message" class="success-message mt-4 p-3 bg-green-100 text-green-700 rounded-md hidden">
+                        <p class="font-semibold">Thank you for your submission!</p>
+                        <p class="text-sm mt-1">We've received your wedding package request and will contact you shortly.</p>
+                    </div>
+                    
+                    <div id="error-message" class="mt-4 p-3 bg-red-100 text-red-700 rounded-md hidden">
+                        <p class="font-semibold">Please complete your selections</p>
+                        <p class="text-sm mt-1" id="error-details">You need to select a wedding month and accommodation package before submitting.</p>
+                    </div>
+                    
+                    <div class="mt-6 text-sm text-gray-500">
+                        <p>This calculator provides an estimate. Final pricing may vary.</p>
+                        <p class="mt-2">For questions, please contact us directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#9c7c5c] text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Wedding Venue. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // State management
+        let selectedOptions = {
+            date: null,
+            lodging: null,
+            addons: []
+        };
+        
+        // Price calculation
+        function calculatePrices() {
+            // Calculate subtotal
+            let subtotal = 0;
+            
+            if (selectedOptions.date) {
+                subtotal += selectedOptions.date.price;
+            }
+            
+            if (selectedOptions.lodging) {
+                subtotal += selectedOptions.lodging.price;
+            }
+            
+            selectedOptions.addons.forEach(addon => {
+                subtotal += addon.price;
+            });
+            
+            // Calculate tax and total
+            const taxRate = 0.06; // Updated tax rate to 6%
+            const tax = subtotal * taxRate;
+            const total = subtotal + tax;
+            
+            // Update the summary
+            document.getElementById('subtotal').textContent = `$${subtotal.toLocaleString()}`;
+            document.getElementById('tax').textContent = `$${tax.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            document.getElementById('total').textContent = `$${total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            
+            // Update hidden form fields
+            document.getElementById('subtotal-field').value = `$${subtotal.toLocaleString()}`;
+            document.getElementById('tax-field').value = `$${tax.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            document.getElementById('total-field').value = `$${total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            
+            return { subtotal, tax, total };
+        }
+        
+        // Update summary display
+        function updateSummary() {
+            // Update date selection
+            if (selectedOptions.date) {
+                document.getElementById('date-selection').textContent = selectedOptions.date.label;
+                document.getElementById('date-price').textContent = `$${selectedOptions.date.price.toLocaleString()}`;
+                document.getElementById('summary-date').classList.add('highlight');
+                setTimeout(() => {
+                    document.getElementById('summary-date').classList.remove('highlight');
+                }, 1000);
+                
+                // Update hidden form fields
+                document.getElementById('selected-date').value = selectedOptions.date.label;
+                document.getElementById('selected-date-price').value = `$${selectedOptions.date.price.toLocaleString()}`;
+            } else {
+                document.getElementById('date-selection').textContent = 'Please select a month';
+                document.getElementById('date-price').textContent = '$0';
+                
+                // Clear hidden form fields
+                document.getElementById('selected-date').value = '';
+                document.getElementById('selected-date-price').value = '';
+            }
+            
+            // Update lodging selection
+            if (selectedOptions.lodging) {
+                document.getElementById('lodging-selection').textContent = selectedOptions.lodging.label;
+                document.getElementById('lodging-price').textContent = `$${selectedOptions.lodging.price.toLocaleString()}`;
+                document.getElementById('summary-lodging').classList.add('highlight');
+                setTimeout(() => {
+                    document.getElementById('summary-lodging').classList.remove('highlight');
+                }, 1000);
+                
+                // Update hidden form fields
+                document.getElementById('selected-lodging').value = selectedOptions.lodging.label;
+                document.getElementById('selected-lodging-price').value = `$${selectedOptions.lodging.price.toLocaleString()}`;
+            } else {
+                document.getElementById('lodging-selection').textContent = 'Please select accommodations';
+                document.getElementById('lodging-price').textContent = '$0';
+                
+                // Clear hidden form fields
+                document.getElementById('selected-lodging').value = '';
+                document.getElementById('selected-lodging-price').value = '';
+            }
+            
+            // Update add-ons
+            const addonList = document.getElementById('addon-list');
+            if (selectedOptions.addons.length > 0) {
+                addonList.innerHTML = '';
+                let addonDetails = [];
+                
+                selectedOptions.addons.forEach(addon => {
+                    const addonItem = document.createElement('div');
+                    addonItem.className = 'flex justify-between';
+                    addonItem.innerHTML = `
+                        <p>${addon.label}</p>
+                        <p>$${addon.price.toLocaleString()}</p>
+                    `;
+                    addonList.appendChild(addonItem);
+                    
+                    // Collect addon details for the hidden form field
+                    addonDetails.push(`${addon.label}: $${addon.price.toLocaleString()}`);
+                });
+                
+                document.getElementById('summary-addons').classList.add('highlight');
+                setTimeout(() => {
+                    document.getElementById('summary-addons').classList.remove('highlight');
+                }, 1000);
+                
+                // Update hidden form field
+                document.getElementById('selected-addons').value = addonDetails.join(', ');
+            } else {
+                addonList.innerHTML = '<p class="text-gray-400 italic text-sm">No enhancements selected</p>';
+                
+                // Clear hidden form field
+                document.getElementById('selected-addons').value = 'None';
+            }
+            
+            // Calculate and update prices
+            calculatePrices();
+            
+            // Update submit button state
+            const submitBtn = document.getElementById('submit-btn');
+            if (selectedOptions.date && selectedOptions.lodging) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+        
+        // Check dependencies for add-ons
+        function updateAddOnAvailability() {
+            const thursdayLodgingOption = document.getElementById('thursday-lodging-option');
+            
+            // Check if Premium package is selected
+            if (selectedOptions.lodging && selectedOptions.lodging.value === 'premium') {
+                thursdayLodgingOption.classList.remove('disabled');
+            } else {
+                // If not premium, disable and deselect Thursday lodging
+                thursdayLodgingOption.classList.add('disabled');
+                thursdayLodgingOption.classList.remove('selected');
+                
+                // Remove from selected addons if it exists
+                selectedOptions.addons = selectedOptions.addons.filter(addon => addon.value !== 'thursday-lodging');
+            }
+        }
+        
+        // Handle option selection
+        const optionCards = document.querySelectorAll('.option-card');
+        
+        optionCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Skip if disabled
+                if (this.classList.contains('disabled')) {
+                    return;
+                }
+                
+                const type = this.dataset.type;
+                const value = this.dataset.value;
+                const price = parseInt(this.dataset.price);
+                
+                if (type === 'date') {
+                    // Deselect previous date option
+                    document.querySelectorAll('.option-card[data-type="date"]').forEach(el => {
+                        el.classList.remove('selected');
+                    });
+                    
+                    // Select new date option
+                    this.classList.add('selected');
+                    
+                    // Update state
+                    let label;
+                    if (value === 'apr-may') label = 'April & May';
+                    else if (value === 'jun-sep-oct') label = 'June, September & October';
+                    else label = 'July & August';
+                    
+                    selectedOptions.date = { value, price, label };
+                }
+                else if (type === 'lodging') {
+                    // Deselect previous lodging option
+                    document.querySelectorAll('.option-card[data-type="lodging"]').forEach(el => {
+                        el.classList.remove('selected');
+                    });
+                    
+                    // Select new lodging option
+                    this.classList.add('selected');
+                    
+                    // Update state
+                    let label;
+                    if (value === 'standard') label = 'Intimate Retreat';
+                    else if (value === 'deluxe') label = 'Family Gathering';
+                    else label = 'Estate Experience';
+                    
+                    selectedOptions.lodging = { value, price, label };
+                    
+                    // Update add-on availability based on lodging selection
+                    updateAddOnAvailability();
+                }
+                else if (type === 'addon') {
+                    // Toggle addon selection
+                    if (this.classList.contains('selected')) {
+                        // Remove addon
+                        this.classList.remove('selected');
+                        selectedOptions.addons = selectedOptions.addons.filter(addon => addon.value !== value);
+                    } else {
+                        // Add addon
+                        this.classList.add('selected');
+                        let label;
+                        if (value === 'thursday-setup') label = 'Early Barn Access';
+                        else if (value === 'thursday-lodging') label = 'Extended Stay Thursday';
+                        else label = 'Leisurely Sunday';
+                        
+                        selectedOptions.addons.push({ value, price, label });
+                    }
+                }
+                
+                // Update summary
+                updateSummary();
+                
+                // Hide any previous messages
+                document.getElementById('success-message').classList.add('hidden');
+                document.getElementById('error-message').classList.add('hidden');
+            });
+        });
+        
+        // Reset button
+        document.getElementById('reset-btn').addEventListener('click', function() {
+            // Clear state
+            selectedOptions = {
+                date: null,
+                lodging: null,
+                addons: []
+            };
+            
+            // Deselect all options
+            document.querySelectorAll('.option-card').forEach(el => {
+                el.classList.remove('selected');
+            });
+            
+            // Reset add-on availability
+            updateAddOnAvailability();
+            
+            // Clear form
+            document.getElementById('contact-form').reset();
+            
+            // Update summary
+            updateSummary();
+            
+            // Hide any previous messages
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('error-message').classList.add('hidden');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Submit button
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            // Validate selections
+            if (!selectedOptions.date || !selectedOptions.lodging) {
+                document.getElementById('error-message').classList.remove('hidden');
+                return;
+            }
+            
+            // Validate form
+            const form = document.getElementById('contact-form');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            // Submit the form
+            form.submit();
+            
+            // Show success message (this will only be seen briefly before redirect)
+            document.getElementById('success-message').classList.remove('hidden');
+            document.getElementById('success-message').classList.add('show');
+        });
+    });
+</script>
